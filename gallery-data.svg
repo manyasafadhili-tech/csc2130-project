@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title">
+  <title id="title">Connected web technology illustration</title>
+  <rect width="800" height="500" fill="#d9f0f2"/>
+  <circle cx="400" cy="250" r="178" fill="#b7e2e7"/>
+  <path d="M258 205h284M258 295h284M330 150v200M470 150v200" stroke="#176b87" stroke-linecap="round" stroke-width="10" stroke-dasharray="14 16"/>
+  <rect x="108" y="170" width="178" height="160" rx="20" fill="#fff"/>
+  <rect x="126" y="190" width="142" height="34" rx="10" fill="#176b87"/>
+  <path d="M145 250l-18 18 18 18M247 250l18 18-18 18M211 244l-27 48" fill="none" stroke="#102a43" stroke-linecap="round" stroke-linejoin="round" stroke-width="9"/>
+  <rect x="511" y="170" width="178" height="160" rx="20" fill="#fff"/>
+  <ellipse cx="600" cy="218" rx="48" ry="17" fill="#176b87"/>
+  <path d="M552 218v66c0 10 22 18 48 18s48-8 48-18v-66M552 250c0 10 22 18 48 18s48-8 48-18" fill="none" stroke="#176b87" stroke-width="8"/>
+  <rect x="313" y="87" width="174" height="112" rx="20" fill="#102a43"/>
+  <path d="M347 124l-17 19 17 19M453 124l17 19-17 19M430 117l-24 53" fill="none" stroke="#d9f0f2" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/>
+  <rect x="313" y="301" width="174" height="112" rx="20" fill="#176b87"/>
+  <path d="M350 333h100M350 355h72M350 377h84" stroke="#fff" stroke-linecap="round" stroke-width="9"/>
+</svg>

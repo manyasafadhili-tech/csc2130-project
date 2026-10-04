@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title">
+  <title id="title">Code editor illustration</title>
+  <rect width="800" height="500" fill="#e8f3f6"/>
+  <circle cx="104" cy="92" r="55" fill="#b7e2e7"/>
+  <rect x="112" y="72" width="576" height="354" rx="22" fill="#102a43"/>
+  <rect x="112" y="72" width="576" height="52" rx="22" fill="#176b87"/>
+  <circle cx="145" cy="98" r="8" fill="#fff"/>
+  <circle cx="173" cy="98" r="8" fill="#b7e2e7"/>
+  <circle cx="201" cy="98" r="8" fill="#b7e2e7"/>
+  <rect x="146" y="155" width="50" height="12" rx="6" fill="#61d1c5"/>
+  <rect x="212" y="155" width="196" height="12" rx="6" fill="#d8edf9"/>
+  <rect x="178" y="188" width="80" height="12" rx="6" fill="#f1b56b"/>
+  <rect x="274" y="188" width="270" height="12" rx="6" fill="#d8edf9"/>
+  <rect x="178" y="221" width="135" height="12" rx="6" fill="#61d1c5"/>
+  <rect x="329" y="221" width="216" height="12" rx="6" fill="#d8edf9"/>
+  <rect x="146" y="254" width="62" height="12" rx="6" fill="#61d1c5"/>
+  <rect x="224" y="254" width="312" height="12" rx="6" fill="#d8edf9"/>
+  <rect x="178" y="287" width="94" height="12" rx="6" fill="#f1b56b"/>
+  <rect x="288" y="287" width="184" height="12" rx="6" fill="#d8edf9"/>
+  <rect x="146" y="320" width="116" height="12" rx="6" fill="#61d1c5"/>
+  <rect x="278" y="320" width="256" height="12" rx="6" fill="#d8edf9"/>
+  <path d="M630 355l-30 25 30 25M660 355l30 25-30 25" fill="none" stroke="#b7e2e7" stroke-linecap="round" stroke-linejoin="round" stroke-width="12"/>
+</svg>

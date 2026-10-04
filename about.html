@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about the goals and technologies demonstrated in Fadhili Manyasa's web development project.">
+    <title>About | Fadhili Software Engineering Project</title>
+    <style>
+        :root {
+            --navy: #102a43;
+            --blue: #176b87;
+            --ink: #243b53;
+            --muted: #52667a;
+            --paper: #f4f8fb;
+            --white: #fff;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        header, footer { background: var(--navy); color: var(--white); }
+
+        .container {
+            width: min(1100px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 18px;
+            padding: 16px 0;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: inherit;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .brand img { width: 76px; height: 48px; object-fit: contain; }
+        nav { display: flex; flex-wrap: wrap; gap: 6px; }
+        nav a { border-radius: 6px; color: inherit; padding: 8px 10px; text-decoration: none; }
+        nav a:hover, nav a:focus-visible, nav a[aria-current="page"] { background: #ffffff24; }
+
+        main { padding: 48px 0 64px; }
+
+        .intro, .content-card {
+            padding: 28px;
+            border-radius: 14px;
+            background: var(--white);
+            box-shadow: 0 8px 24px #102a4310;
+        }
+
+        .intro { margin-bottom: 20px; }
+        .eyebrow { color: var(--blue); font-size: 0.8rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; }
+        h1, h2 { color: var(--navy); }
+        h1 { margin: 8px 0 12px; font-size: clamp(2rem, 5vw, 3rem); line-height: 1.15; }
+        .intro p, .content-card p { color: var(--muted); }
+        .content-card + .content-card { margin-top: 20px; }
+        .content-card h2 { margin-top: 0; }
+        .content-card ul { margin-bottom: 0; padding-left: 22px; }
+        footer { padding: 20px 0; }
+        footer p { margin: 0; }
+
+        @media (max-width: 700px) {
+            .container { width: min(calc(100% - 28px), 1100px); }
+            main { padding: 30px 0 42px; }
+            .intro, .content-card { padding: 22px; }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container header-inner">
+            <a class="brand" href="index.html">
+                <img src="logo.svg" alt="">
+                <span>Fadhili Software Engineering</span>
+            </a>
+            <nav aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html" aria-current="page">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="data.html">Data</a>
+                <a href="gallery.html">Gallery</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="intro" aria-labelledby="page-title">
+            <span class="eyebrow">About the work</span>
+            <h1 id="page-title">A student web development project</h1>
+            <p>This project demonstrates foundational HTML5 page structure, semantic elements, navigation, tables, and media. It is a static front-end learning project; PHP, MySQL, and JavaScript are not currently implemented.</p>
+        </section>
+
+        <section class="content-card">
+            <h2>Mission</h2>
+            <p>To build clear, accessible web pages while developing practical skills in modern web technologies.</p>
+        </section>
+
+        <section class="content-card">
+            <h2>Vision</h2>
+            <p>To continue learning and create useful digital experiences that are easy for people to explore.</p>
+        </section>
+
+        <section class="content-card">
+            <h2>Technologies demonstrated</h2>
+            <ul>
+                <li><strong>HTML5:</strong> structures page content and provides semantic meaning.</li>
+                <li><strong>CSS3:</strong> styles layouts and supports responsive presentation.</li>
+                <li><strong>SVG:</strong> provides lightweight, scalable project illustrations.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Fadhili Manyasa. <a href="contact.html" style="color: inherit;">Contact me</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Records</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 30px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 12px;
+            text-align: left;
+        }
+
+        thead {
+            background-color: lightblue;
+        }
+
+        tfoot {
+            background-color: lightgreen;
+            font-weight: bold;
+        }
+
+        caption {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            margin-bottom: 24px;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 16px;
+            }
+
+            th,
+            td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Student Records Management System</h1>
+
+        <nav aria-label="Main navigation">
+            <a href="index.html">Home</a> |
+            <a href="about.html">About</a> |
+            <a href="contact.html">Contact</a> |
+            <a href="data.html" aria-current="page">Data</a> |
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <h2>Student Academic Records</h2>
+
+        <div class="table-wrap">
+            <table>
+
+            <caption>Computer Science Student Performance</caption>
+
+            <thead>
+                <tr>
+                    <th scope="col">Admission No.</th>
+                    <th scope="col">Student Name</th>
+                    <th scope="col">Course</th>
+                    <th scope="col">Marks</th>
+                    <th scope="col">Grade</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>CSC001</td>
+                    <td>Fadhili Manyasa</td>
+                    <td rowspan="2">Computer Science</td>
+                    <td>85</td>
+                    <td>A</td>
+                </tr>
+
+                <tr>
+                    <td>CSC002</td>
+                    <td>Brian</td>
+                    <td>78</td>
+                    <td>B</td>
+                </tr>
+
+                <tr>
+                    <td>CSC003</td>
+                    <td>Mary</td>
+                    <td>Software Engineering</td>
+                    <td>90</td>
+                    <td>A</td>
+                </tr>
+
+                <tr>
+                    <td>CSC004</td>
+                    <td>John</td>
+                    <td>Computer Science</td>
+                    <td>65</td>
+                    <td>C</td>
+                </tr>
+
+                <tr>
+                    <td>CSC005</td>
+                    <td>Jane</td>
+                    <td>Software Engineering</td>
+                    <td>82</td>
+                    <td>A</td>
+                </tr>
+
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="3">Total Students</td>
+                    <td colspan="2">5 Students</td>
+                </tr>
+            </tfoot>
+
+            </table>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Fadhili Manyasa</p>
+    </footer>
+
+</body>
+
+</html>

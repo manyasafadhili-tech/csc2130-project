@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the web development work and technologies in Fadhili's software engineering project.">
+    <title>Project Gallery | Fadhili Software Engineering</title>
+    <style>
+        :root {
+            --navy: #102a43;
+            --blue: #176b87;
+            --aqua: #d9f0f2;
+            --ink: #243b53;
+            --muted: #52667a;
+            --paper: #f4f8fb;
+            --white: #fff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+
+        .site-header {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .header-inner,
+        main,
+        .footer-inner {
+            width: min(1100px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+            padding: 18px 0;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .brand img {
+            display: block;
+            width: 76px;
+            height: 48px;
+            object-fit: contain;
+        }
+
+        .brand span {
+            font-size: 1.05rem;
+            font-weight: 700;
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        nav a {
+            border-radius: 6px;
+            color: var(--white);
+            padding: 8px 10px;
+            text-decoration: none;
+        }
+
+        nav a:hover,
+        nav a:focus-visible,
+        nav a[aria-current="page"] {
+            background: #ffffff24;
+            outline: none;
+        }
+
+        main {
+            padding: 48px 0 64px;
+        }
+
+        .intro {
+            max-width: 680px;
+            margin-bottom: 30px;
+        }
+
+        .eyebrow {
+            color: var(--blue);
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        h1,
+        h2,
+        p {
+            margin-top: 0;
+        }
+
+        h1 {
+            color: var(--navy);
+            font-size: clamp(2rem, 5vw, 3.25rem);
+            line-height: 1.15;
+            margin: 8px 0 14px;
+        }
+
+        .intro p,
+        .card p,
+        .technology-section > p {
+            color: var(--muted);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            overflow: hidden;
+            border: 1px solid #d9e3ec;
+            border-radius: 14px;
+            background: var(--white);
+            box-shadow: 0 8px 24px #102a4310;
+        }
+
+        .card img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+            background: var(--aqua);
+        }
+
+        .card-content {
+            padding: 18px 20px 20px;
+        }
+
+        .card h2 {
+            color: var(--navy);
+            font-size: 1.15rem;
+            margin-bottom: 7px;
+        }
+
+        .card p {
+            margin-bottom: 0;
+        }
+
+        .technology-section {
+            margin-top: 48px;
+            padding: 28px;
+            border-radius: 14px;
+            background: var(--white);
+            box-shadow: 0 8px 24px #102a4310;
+        }
+
+        .technology-section h2 {
+            color: var(--navy);
+            margin-bottom: 5px;
+        }
+
+        .video-section {
+            margin-top: 32px;
+            padding: 28px;
+            border-radius: 14px;
+            background: var(--white);
+            box-shadow: 0 8px 24px #102a4310;
+        }
+
+        .video-section h2 {
+            color: var(--navy);
+            margin-bottom: 5px;
+        }
+
+        .video-section > p {
+            color: var(--muted);
+        }
+
+        .audio-section {
+            margin-top: 32px;
+            padding: 28px;
+            border-radius: 14px;
+            background: var(--white);
+            box-shadow: 0 8px 24px #102a4310;
+        }
+
+        .audio-section h2 {
+            color: var(--navy);
+            margin-bottom: 5px;
+        }
+
+        .audio-section p {
+            color: var(--muted);
+        }
+
+        .audio-section audio {
+            display: block;
+            width: 100%;
+            max-width: 620px;
+        }
+
+        .video-frame {
+            overflow: hidden;
+            aspect-ratio: 16 / 9;
+            border-radius: 10px;
+            background: var(--navy);
+        }
+
+        .video-frame iframe {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 18px;
+            text-align: left;
+        }
+
+        caption {
+            padding-bottom: 10px;
+            color: var(--muted);
+            text-align: left;
+        }
+
+        th,
+        td {
+            border-bottom: 1px solid #d9e3ec;
+            padding: 12px 14px;
+        }
+
+        th {
+            background: #e8f3f6;
+            color: var(--navy);
+        }
+
+        .site-footer {
+            background: var(--navy);
+            color: #e6f1f5;
+            padding: 20px 0;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px 24px;
+            flex-wrap: wrap;
+        }
+
+        .footer-inner p {
+            margin: 0;
+        }
+
+        .footer-inner a {
+            color: inherit;
+        }
+
+        @media (max-width: 760px) {
+            .header-inner {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 520px) {
+            .header-inner,
+            main,
+            .footer-inner {
+                width: min(calc(100% - 28px), 1100px);
+            }
+
+            main {
+                padding: 34px 0 44px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .technology-section {
+                padding: 20px 16px;
+            }
+
+            .video-section {
+                padding: 20px 16px;
+            }
+
+            .audio-section {
+                padding: 20px 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">
+                <img src="logo.svg" alt="">
+                <span>Fadhili Software Engineering</span>
+            </a>
+            <nav aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="data.html">Data</a>
+                <a href="gallery.html" aria-current="page">Gallery</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="intro" aria-labelledby="page-title">
+            <span class="eyebrow">Ideas into interfaces</span>
+            <h1 id="page-title">Project Gallery</h1>
+            <p>A closer look at the building blocks of this project—from page structure and visual design to the tools that bring a website together.</p>
+        </section>
+
+        <section class="gallery" aria-label="Project highlights">
+            <article class="card">
+                <img src="gallery-web.svg" alt="Illustration of a responsive website layout on a desktop screen">
+                <div class="card-content">
+                    <h2>Web page structure</h2>
+                    <p>Semantic HTML organizes content into clear, meaningful sections.</p>
+                </div>
+            </article>
+            <article class="card">
+                <img src="gallery-code.svg" alt="Illustration of code displayed in an editor">
+                <div class="card-content">
+                    <h2>Design and code</h2>
+                    <p>CSS styles the interface and helps it adapt to different screen sizes.</p>
+                </div>
+            </article>
+            <article class="card">
+                <img src="gallery-data.svg" alt="Illustration of connected data and technology blocks">
+                <div class="card-content">
+                    <h2>Connected technologies</h2>
+                    <p>Front-end and back-end tools work together to support useful web experiences.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="technology-section" aria-labelledby="technology-title">
+            <h2 id="technology-title">Web technologies overview</h2>
+            <p>These technologies are commonly used to build websites; this project currently demonstrates HTML, CSS, and SVG in a static site.</p>
+            <div class="table-wrap">
+                <table>
+                    <caption>Examples of web development technologies and their purposes</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Technology</th>
+                            <th scope="col">Area</th>
+                            <th scope="col">Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>HTML</td><td>Front end</td><td>Structures page content</td></tr>
+                        <tr><td>CSS</td><td>Front end</td><td>Styles and lays out pages</td></tr>
+                        <tr><td>JavaScript</td><td>Front end</td><td>Adds interactive behavior</td></tr>
+                        <tr><td>PHP</td><td>Back end</td><td>Processes requests on a server</td></tr>
+                        <tr><td>MySQL</td><td>Database</td><td>Stores and retrieves information</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="video-section" aria-labelledby="video-title">
+            <h2 id="video-title">Web development video</h2>
+            <p>This public video introduces HTML, one of the core technologies used to build this project. It is a general tutorial, not a recording of this specific website.</p>
+            <div class="video-frame">
+                <iframe
+                    src="https://www.youtube-nocookie.com/embed/UB1O30fR-EE?rel=0"
+                    title="HTML Crash Course for Absolute Beginners by Traversy Media"
+                    loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p><a href="https://www.youtube.com/watch?v=UB1O30fR-EE" target="_blank" rel="noopener noreferrer">Open the video on YouTube</a> if it does not play here.</p>
+        </section>
+
+        <section class="audio-section" aria-labelledby="audio-title">
+            <h2 id="audio-title">Audio sample</h2>
+            <p>Use the controls to play this sample audio. It is hosted by MDN and released under CC0.</p>
+            <audio controls preload="metadata">
+                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" type="audio/mpeg">
+                Your browser does not support audio playback. Please use a browser that supports HTML audio.
+            </audio>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>&copy; 2026 Fadhili Manyasa. All rights reserved.</p>
+            <p><a href="contact.html">Get in touch</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

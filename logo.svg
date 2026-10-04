@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="200" viewBox="0 0 320 200" role="img" aria-labelledby="title desc">
+  <title id="title">Fadhili Project Logo</title>
+  <desc id="desc">A blue rounded square with a white F and text saying Fadhili Project.</desc>
+  <rect width="320" height="200" rx="24" fill="#0b4f6c"/>
+  <rect x="28" y="28" width="90" height="90" rx="18" fill="#ffffff"/>
+  <path d="M52 48h42v12H68v18h22v12H68v16h26v12H52V48z" fill="#0b4f6c"/>
+  <text x="140" y="88" font-size="28" font-weight="700" font-family="Arial, sans-serif" fill="#ffffff">Fadhili</text>
+  <text x="140" y="120" font-size="18" font-family="Arial, sans-serif" fill="#d8edf9">Software Project</text>
+</svg>
