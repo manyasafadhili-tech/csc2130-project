@@ -43,7 +43,7 @@ The misspelled legacy filenames `abou.html`, `galley.html`, and `semantic 2 .htm
 └── semantic.html
 ```
 
-The HTML pages, SVG illustrations, and two gallery photos are local files. The gallery photos are credited in the page and shared under Creative Commons licenses. The gallery's in-page video and keyboard-typing audio are hosted externally and require an internet connection. The video is credited to Coverr-Free-Footage and shared under the Pixabay Content License; the audio is shared under CC0. Credits and source/license links are on the gallery page. A PHP/MySQL password-reset flow is available at `forgot-password.php`; it assumes that the application's account system stores users in the schema documented in `database/password_reset.sql`. This project does not include registration or login.
+The HTML pages, SVG illustrations, and two gallery photos are local files. The gallery is curated by Fadhili Manyasa, while original media creators and licenses are credited on the page. The gallery photos are shared under Creative Commons licenses. The gallery's in-page video and keyboard-typing audio are hosted externally and require an internet connection. The video is credited to Coverr-Free-Footage and shared under the Pixabay Content License; the audio is shared under CC0. Credits and source/license links are on the gallery page. A PHP/MySQL password-reset flow is available at `forgot-password.php`; it assumes that the application's account system stores users in the schema documented in `database/password_reset.sql`. This project does not include registration or login.
 
 ## Run locally
 
