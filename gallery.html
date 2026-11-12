@@ -127,7 +127,7 @@
 
         .gallery {
             display: grid;
-            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 22px;
         }
 
@@ -159,6 +159,11 @@
 
         .card p {
             margin-bottom: 0;
+        }
+
+        .card .photo-credit {
+            margin-top: 10px;
+            font-size: 0.85rem;
         }
 
         .technology-section {
@@ -214,18 +219,12 @@
             max-width: 620px;
         }
 
-        .video-frame {
-            overflow: hidden;
-            aspect-ratio: 16 / 9;
-            border-radius: 10px;
-            background: var(--navy);
-        }
-
-        .video-frame iframe {
+        .video-player {
             display: block;
             width: 100%;
-            height: 100%;
-            border: 0;
+            height: auto;
+            border-radius: 10px;
+            background: var(--navy);
         }
 
         .table-wrap {
@@ -343,26 +342,21 @@
             <p>A closer look at the building blocks of this project—from page structure and visual design to the tools that bring a website together.</p>
         </section>
 
-        <section class="gallery" aria-label="Project highlights">
+        <section class="gallery" aria-label="People working with web technology">
             <article class="card">
-                <img src="gallery-web.svg" alt="Illustration of a responsive website layout on a desktop screen">
+                <img src="gallery-pair-programming.jpg" alt="Two people working together at a computer during a pair-programming session">
                 <div class="card-content">
-                    <h2>Web page structure</h2>
-                    <p>Semantic HTML organizes content into clear, meaningful sections.</p>
+                    <h2>Developers collaborating</h2>
+                    <p>Pair programming lets people work together to solve problems and build software.</p>
+                    <p class="photo-credit">Photo by <a href="https://commons.wikimedia.org/wiki/File:Pair_programming_1.jpg" target="_blank" rel="noopener noreferrer">Lisamarie Babik</a>, licensed under <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank" rel="noopener noreferrer">CC BY 2.0</a>.</p>
                 </div>
             </article>
             <article class="card">
-                <img src="gallery-code.svg" alt="Illustration of code displayed in an editor">
+                <img src="gallery-computer-lab.jpg" alt="Students working together at computers in a computer lab">
                 <div class="card-content">
-                    <h2>Design and code</h2>
-                    <p>CSS styles the interface and helps it adapt to different screen sizes.</p>
-                </div>
-            </article>
-            <article class="card">
-                <img src="gallery-data.svg" alt="Illustration of connected data and technology blocks">
-                <div class="card-content">
-                    <h2>Connected technologies</h2>
-                    <p>Front-end and back-end tools work together to support useful web experiences.</p>
+                    <h2>Learning in a computer lab</h2>
+                    <p>Students use computers together to learn and explore technology.</p>
+                    <p class="photo-credit">Photo by <a href="https://commons.wikimedia.org/wiki/File:Work_in_the_computer_lab.JPG" target="_blank" rel="noopener noreferrer">MCPearson</a>, licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a>.</p>
                 </div>
             </article>
         </section>
@@ -392,28 +386,23 @@
         </section>
 
         <section class="video-section" aria-labelledby="video-title">
-            <h2 id="video-title">Web development video</h2>
-            <p>This public video introduces HTML, one of the core technologies used to build this project. It is a general tutorial, not a recording of this specific website.</p>
-            <div class="video-frame">
-                <iframe
-                    src="https://www.youtube-nocookie.com/embed/UB1O30fR-EE?rel=0"
-                    title="HTML Crash Course for Absolute Beginners by Traversy Media"
-                    loading="lazy"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-                </iframe>
-            </div>
-            <p><a href="https://www.youtube.com/watch?v=UB1O30fR-EE" target="_blank" rel="noopener noreferrer">Open the video on YouTube</a> if it does not play here.</p>
+            <h2 id="video-title">People coding together</h2>
+            <p>This short video shows people working with code. Press play to watch it here; the keyboard recording below can be played separately whenever you want.</p>
+            <video class="video-player" controls preload="metadata" playsinline width="1920" height="1080" poster="https://cdn.pixabay.com/video/2015/10/16/1021-142621249_tiny.jpg">
+                <source src="https://cdn.pixabay.com/video/2015/10/16/1021-142621249_large.mp4" type="video/mp4">
+                Your browser does not support video playback.
+            </video>
+            <p>Video by <a href="https://pixabay.com/users/coverr-free-footage-1281706/" target="_blank" rel="noopener noreferrer">Coverr-Free-Footage</a> from <a href="https://pixabay.com/videos/coding-developing-girls-woman-1021/" target="_blank" rel="noopener noreferrer">Pixabay</a>, shared under the <a href="https://pixabay.com/service/license-summary/" target="_blank" rel="noopener noreferrer">Pixabay Content License</a>.</p>
         </section>
 
         <section class="audio-section" aria-labelledby="audio-title">
-            <h2 id="audio-title">Audio sample</h2>
-            <p>Use the controls to play this sample audio. It is hosted by MDN and released under CC0.</p>
+            <h2 id="audio-title">The sound of building the web</h2>
+            <p>Listen to a keyboard typing recording—a small sound from the process of writing code. The recording by Dustin_Davis is shared under CC0.</p>
             <audio controls preload="metadata">
-                <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" type="audio/mpeg">
+                <source src="https://upload.wikimedia.org/wikipedia/commons/4/4f/399603_dustin-davis_typing.wav" type="audio/wav">
                 Your browser does not support audio playback. Please use a browser that supports HTML audio.
             </audio>
+            <p><a href="https://commons.wikimedia.org/wiki/File:399603_dustin-davis_typing.wav" target="_blank" rel="noopener noreferrer">View the audio source and license on Wikimedia Commons</a>.</p>
         </section>
     </main>
 

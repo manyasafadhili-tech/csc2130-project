@@ -14,7 +14,7 @@ An introductory static website by Fadhili Manyasa, created to demonstrate HTML5 
 - `about.html` — project description and technologies
 - `contact.html` — contact details and Kibabii University map
 - `data.html` — example student records table
-- `gallery.html` — project illustrations, technology table, and media examples
+- `gallery.html` — real-person photos, video, audio, and a technology table
 - `semantic.html` — example page demonstrating semantic HTML elements
 
 The misspelled legacy filenames `abou.html`, `galley.html`, and `semantic 2 .html` redirect to their correctly named pages.
@@ -30,8 +30,10 @@ The misspelled legacy filenames `abou.html`, `galley.html`, and `semantic 2 .htm
 ├── contact.html
 ├── data.html
 ├── galley.html
+├── gallery-computer-lab.jpg
 ├── gallery-code.svg
 ├── gallery-data.svg
+├── gallery-pair-programming.jpg
 ├── gallery-web.svg
 ├── gallery.html
 ├── index.html
@@ -41,12 +43,15 @@ The misspelled legacy filenames `abou.html`, `galley.html`, and `semantic 2 .htm
 └── semantic.html
 ```
 
-The HTML pages and SVG illustrations are self-contained local files. The contact map, YouTube tutorial, and sample audio on the gallery page use external services and require an internet connection. The project is currently a static front end; PHP, MySQL, and JavaScript are not implemented.
+The HTML pages, SVG illustrations, and two gallery photos are local files. The gallery photos are credited in the page and shared under Creative Commons licenses. The gallery's in-page video and keyboard-typing audio are hosted externally and require an internet connection. The video is credited to Coverr-Free-Footage and shared under the Pixabay Content License; the audio is shared under CC0. Credits and source/license links are on the gallery page.
 
 ## Run locally
 
-1. Open this folder in Visual Studio Code.
-2. Start the **Live Server** extension (right-click `index.html` and choose **Open with Live Server**, or select **Go Live**).
-3. Open the local address shown by Live Server. The `.vscode/launch.json` configuration expects the default port `5500`.
+1. Start Apache and MySQL from the XAMPP Control Panel.
+2. Import `database/password_reset.sql` into MySQL using phpMyAdmin.
+3. Configure PHP's `mail()` function to deliver email (see [XAMPP's sendmail configuration](https://www.apachefriends.org/faq_windows.html)) and set a valid sender address with the `PASSWORD_RESET_FROM` environment variable.
+4. Open `http://localhost/CSC2130-project/forgot-password.php`.
 
-You can also open `index.html` directly in a browser. External embedded media may be limited when opening pages as local `file://` URLs; use Live Server for the best results.
+Set `DB_HOST`, `DB_NAME`, `DB_USER`, and `DB_PASSWORD` to configure the MySQL connection. Defaults target a local XAMPP MySQL installation (`127.0.0.1`, database `csc2130_project`, user `root`, empty password); change them before deployment. Set `PASSWORD_RESET_BASE_URL` to the public URL of `reset-password.php` when deploying the site somewhere other than `http://localhost/CSC2130-project/`. Reset links expire after 30 minutes.
+
+The site’s static pages can still be opened directly or with Live Server, but PHP pages and endpoints require Apache/PHP. The `.vscode/launch.json` configuration is for the static site and does not run PHP.
